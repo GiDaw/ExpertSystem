@@ -1,0 +1,15 @@
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.answerBtn{
+  background-color: aquamarine;
+  border: 1px solid black;
+  border-radius: 5rem;
+  width: 5rem;
+  height: 5rem;
+}
