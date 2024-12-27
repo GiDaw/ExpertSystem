@@ -1,0 +1,49 @@
+Gatunek;Typ;Historia;Sterowanie;Dlugosc;Go
+RPG;turowa;rozwinieta;dobre;dluga;zagram
+RPG;turowa;rozwinieta;dobre;krotka;zagram
+RPG;turowa;rozwinieta;slabe;dluga;nie zagram
+RPG;turowa;rozwinieta;slabe;krotka;zagram
+RPG;turowa;prosta;dobre;dluga;nie zagram
+RPG;turowa;prosta;dobre;krotka;zagram
+RPG;turowa;prosta;slabe;dluga;nie zagram
+RPG;turowa;prosta;slabe;krotka;nie zagram
+RPG;akcji;rozwinieta;dobre;dluga;nie zagram
+RPG;akcji;rozwinieta;dobre;krotka;zagram
+RPG;akcji;rozwinieta;slabe;dluga;nie zagram
+RPG;akcji;rozwinieta;slabe;krotka;zagram
+RPG;akcji;prosta;dobre;dluga;zagram
+RPG;akcji;prosta;dobre;krotka;nie zagram
+RPG;akcji;prosta;slabe;dluga;nie zagram
+RPG;akcji;prosta;slabe;krotka;zagram
+RoqueLike;shooter;rozwinieta;dobre;dluga;zagram
+RoqueLike;shooter;rozwinieta;dobre;krotka;zagram
+RoqueLike;shooter;rozwinieta;slabe;dluga;nie zagram
+RoqueLike;shooter;rozwinieta;slabe;krotka;nie zagram
+RoqueLike;shooter;prosta;dobre;dluga;zagram
+RoqueLike;shooter;prosta;dobre;krotka;zagram
+RoqueLike;shooter;prosta;slabe;dluga;nie zagram
+RoqueLike;shooter;prosta;slabe;krotka;zagram
+RoqueLike;platform;rozwinieta;dobre;dluga;nie zagram
+RoqueLike;platform;rozwinieta;dobre;krotka;nie zagram
+RoqueLike;platform;rozwinieta;slabe;dluga;zagram
+RoqueLike;platform;rozwinieta;slabe;krotka;nie zagram
+RoqueLike;platform;prosta;dobre;dluga;zagram
+RoqueLike;platform;prosta;dobre;krotka;zagram
+RoqueLike;platform;prosta;slabe;dluga;nie zagram
+RoqueLike;platform;prosta;slabe;krotka;nie zagram
+RTS;autoBattler;rozwinieta;dobre;dluga;zagram
+RTS;autoBattler;rozwinieta;dobre;krotka;nie zagram
+RTS;autoBattler;rozwinieta;slabe;dluga;zagram
+RTS;autoBattler;rozwinieta;slabe;krotka;zagram
+RTS;autoBattler;prosta;dobre;dluga;zagram
+RTS;autoBattler;prosta;dobre;krotka;nie zagram
+RTS;autoBattler;prosta;slabe;dluga;zagram
+RTS;autoBattler;prosta;slabe;krotka;nie zagram
+RTS;baseBuilding;rozwinieta;dobre;dluga;zagram
+RTS;baseBuilding;rozwinieta;dobre;krotka;nie zagram
+RTS;baseBuilding;rozwinieta;slabe;dluga;nie zagram
+RTS;baseBuilding;rozwinieta;slabe;krotka;zagram
+RTS;baseBuilding;prosta;dobre;dluga;nie zagram
+RTS;baseBuilding;prosta;dobre;krotka;nie zagram
+RTS;baseBuilding;prosta;slabe;dluga;zagram
+RTS;baseBuilding;prosta;slabe;krotka;nie zagram
