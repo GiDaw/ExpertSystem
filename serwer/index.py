@@ -38,7 +38,7 @@ y = df['Go']
 dtree = DecisionTreeClassifier()
 dtree = dtree.fit(X, y)
 
-inputs = [[]]
+inputs = [[0,0,0,0,0]]
 
 # print(dtree.predict([[0, 0, 0, 0, 0]]))
 
@@ -54,7 +54,7 @@ inputs = [[]]
 
 
 questions = [{
-    'question': 'Wybierz gatunek gry.',
+    'question': 'Wybierz gatunek gry',
     'answers': [{'name':'RPG','id':0,'image':'RPG.jpg', 'description': 'Gry w których gramy jedna lub drużyna postaci, rozwijając naszą postać czy drużyne w walce i poznając świat z ich strony'}, 
                 {'name':'RoqueLike','id':1,'image':'RoqueLike.jpg','description':'Gry z randomowymi wygenorowanymi poziomamy przez co każda rozgrywka jest inna'}, 
                 {'name':'RTS','id':2, 'image':'RTS.jpg','description':'Gry w których wcialmy się w dowódce miasta czy armii i musimy użyc strategii aby pokonać przeciwnika'} ],
@@ -89,10 +89,8 @@ questions = [{
   },  
   {
     'question': 'Finalny wynik',
-    'answers':[{'name':'dobre','id': 0,'image':'Good.jpg','description':'Historia gry ma wiele wątków pobocznych i jest wciągająca'},
-               {'name':'slabe','id': 1,'image':'Bad.jpg','description':'Historia gry ma tylko wątek głowny albo nie ma jej wcale'}],
     'image': 'History.jpg',
-    'description' : 'Czy w grze sie fajnie porusza?'
+    'description' : 'Zagram w dana gre'
   }]
 
 
@@ -115,8 +113,9 @@ def get_question(questionId):
      if request.method == 'POST':
         
         body=request.json
-        inputs[0].append(body['answer'])
 
+        inputs[0][questionId-1]=body['answer']
+        #special case
         if (questionId == 1):
             answers=[{'name':'turowa','id':0,'image':'TurnBased.jpg','description':'Gra rpg w których walki rozgrywają się turowo na zmiane'},
                 {'name':'akcji','id':1,'image':'Action.jpg','description':'Gra rpg w których walki so szybkie i rozgrywają się w czasie rzeczywistym'},
@@ -124,8 +123,7 @@ def get_question(questionId):
                 {'name':'platform','id':3,'image':'Platformer.jpg','description':'Gry Roquelike w których skacze się miedzy różnymi przeszkodami aby dość do jakiegos celu'},
                 {'name':'autoBattler','id':4,'image':'AutoBattler.jpg','description':'Gry RTS w której walka rozgrywa się sama my tylko wymyślamy strategie naszej armii'},
                 {'name':'baseBuilding','id':5,'image':'BaseBuilding.jpg','description':'Gry RTS w której musimy zbudować dobrą baze z której pożniej bedziemy wysyłać jednostki do przeciwnika'}]        
-            # 'akcji', 'shooter',
-            #       'platform','autoBattler', 'baseBuilding'],
+
 
             if(body['answer'] == 0):
               questions[questionId]['answers']=[answers[0],answers[1]]
@@ -134,7 +132,19 @@ def get_question(questionId):
             if(body['answer'] == 2):
               questions[questionId]['answers']=[answers[4],answers[5]]
 
-            print(questions)
+        #getting result
+        if (questionId == 5):
+            final = dtree.predict(inputs)
+
+            if (final[0] == 1):
+              questions[questionId]['description']="Zagram"
+              questions[questionId]['image']="Zagram.jpg"
+            else:
+              questions[questionId]['description']="NieZagram"
+              questions[questionId]['image']="NieZagram.jpg"
+            inputs[0]=[0,0,0,0,0]
+     
+ 
         return questions[questionId] 
 
 
